@@ -1,0 +1,41 @@
+services:
+  mysql:
+    image: mysql:5.7
+    container_name: clinic-mysql
+    restart: always
+    environment:
+      MYSQL_ROOT_PASSWORD: admin
+      MYSQL_DATABASE: clinic
+      MYSQL_USER: clinicuser
+      MYSQL_PASSWORD: clinicpass
+    ports:
+      - "3306:3306"
+    command: --default-authentication-plugin=mysql_native_password
+    volumes:
+      - mysql_data:/var/lib/mysql
+
+  backend:
+    build:
+      context: .
+      dockerfile: Dockerfile.dev
+    container_name: clinic-backend
+    restart: always
+    depends_on:
+      - mysql
+    environment:
+      DB_HOST: mysql
+      DB_USER: clinicuser
+      DB_PASSWORD: clinicpass
+      DB_NAME: clinic
+      DB_PORT: 3306
+      DB_DIALECT: mysql
+      DB_SCHEMA: clinic
+      JWT_SECRET: somesecret123
+    ports:
+      - "4000:4000"
+    volumes:
+      - .:/app
+      - /app/node_modules
+
+volumes:
+  mysql_data:
