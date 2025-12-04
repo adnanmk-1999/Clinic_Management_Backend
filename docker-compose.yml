@@ -31,11 +31,17 @@ services:
       DB_DIALECT: mysql
       DB_SCHEMA: clinic
       JWT_SECRET: somesecret123
+      TOKEN_SECRET: somesecret123
     ports:
       - "4000:4000"
     volumes:
       - .:/app
       - /app/node_modules
+    command: >
+      sh -c "
+        npm run seed &&
+        npm start
+      "
 
 volumes:
   mysql_data:
