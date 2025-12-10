@@ -125,7 +125,19 @@ async function seed() {
         console.log("Seeding doctors...");
         const doctors = await Doctor.bulkCreate([
             {
-                doctorName: "Dr. Anil Kapoor",
+                doctorName: "Adnan Mohamed Khalid",
+                specialization: "General Physician",
+                qualification: "MBBS",
+                gender: "Male",
+                dateOfBirth: "1980-01-01",
+                address: "Bangalore",
+                dateOfJoin: "2010-01-01",
+                phone: 9345654431,
+                email: "doctor@email.com",
+                experience: "10 years"
+            },
+            {
+                doctorName: "Anil Kapoor",
                 specialization: "Cardiologist",
                 qualification: "MD Cardiology",
                 gender: "Male",
@@ -137,7 +149,7 @@ async function seed() {
                 experience: "15 years"
             },
             {
-                doctorName: "Dr. Riya Fernandes",
+                doctorName: "Riya Fernandes",
                 specialization: "Dermatologist",
                 qualification: "MD Dermatology",
                 gender: "Female",
@@ -149,7 +161,7 @@ async function seed() {
                 experience: "10 years"
             },
             {
-                doctorName: "Dr. Manish Rao",
+                doctorName: "Manish Rao",
                 specialization: "General Physician",
                 qualification: "MBBS, MD Internal Medicine",
                 gender: "Male",
