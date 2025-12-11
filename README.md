@@ -146,7 +146,7 @@ You can edit these files to change database settings, server ports, and secrets.
 This file contains global settings for the backend.
 
 ```
-PORT=4001
+PORT=4000
 ```
 
 **Used for:**
