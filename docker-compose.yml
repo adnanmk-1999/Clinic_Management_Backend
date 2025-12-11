@@ -22,18 +22,12 @@ services:
     restart: always
     depends_on:
       - mysql
+    env_file:
+      - .env.mysql
     environment:
-      DB_HOST: mysql
-      DB_USER: clinicuser
-      DB_PASSWORD: clinicpass
-      DB_NAME: clinic
-      DB_PORT: 3306
-      DB_DIALECT: mysql
-      DB_SCHEMA: clinic
-      JWT_SECRET: somesecret123
-      TOKEN_SECRET: somesecret123
+      NODE_ENV: mysql
     ports:
-      - "4000:4000"
+      - "${PORT}:${PORT}"
     volumes:
       - .:/app
       - /app/node_modules
