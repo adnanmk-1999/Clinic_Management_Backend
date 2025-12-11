@@ -18,7 +18,7 @@
 2. [🧱 Technology Stack](#-technology-stack)
 3. [🏛️ System Architecture](#-system-architecture)
 4. [🗂️ Folder Structure](#-folder-structure)
-5. [⚙️ Environment Configuration (3-ENV Setup)](#-environment-configuration-3-env-setup)
+5. [⚙️ Environment Configuration](#-environment-configuration)
 6. [💻 Getting Started with the Server](#-getting-started-with-the-server)
 7. [🧪 API Overview](#-api-overview)
 8. [🔮 Future Enhancements](#-future-enhancements)
