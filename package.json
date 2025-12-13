@@ -1,7 +1,7 @@
 {
-  "name": "crm-be",
+  "name": "healthtech-backend",
   "version": "1.0.0",
-  "description": "simple job find app for coders",
+  "description": "Clinic management system backend server",
   "main": "index.js",
   "scripts": {
     "start": "set NODE_ENV=mysql && node index.js",
